@@ -1,0 +1,67 @@
+<div class="column-flex"><h1 mat-dialog-title
+>{{valor}}</h1>
+<div mat-dialog-content>
+<form [formGroup]="form">
+  <mat-form-field id="campo" appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input matInput placeholder="Nome" formControlName="nome" #nome>
+    <mat-hint align="end">{{nome.value?.length}}/100</mat-hint>
+    <mat-error *ngIf="form.get('nome')?.invalid">{{getErrorMessage("nome")}}</mat-error>
+    <mat-hint>Digite um nome do produto</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field id="campo" appearance="fill">
+    <mat-label>Compra</mat-label>
+    <input matInput placeholder="Compra" formControlName="valorCompra" #valorCompra>
+    <mat-hint align="end">{{valorCompra.value?.length}}/100</mat-hint>
+    <mat-error *ngIf="form.get('valorCompra')?.invalid">{{getErrorMessage("valorCompra")}}</mat-error>
+    <mat-hint>Digite o valor de compra da unidade</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field id="campo" appearance="fill">
+    <mat-label>Venda</mat-label>
+    <input matInput placeholder="Venda" formControlName="valorVenda" #valorVenda>
+    <mat-hint align="end">{{valorVenda.value?.length}}/100</mat-hint>
+    <mat-error *ngIf="form.get('valorVenda')?.invalid">{{getErrorMessage("valorVenda")}}</mat-error>
+    <mat-hint>Digite o valor de venda da unidade</mat-hint>
+  </mat-form-field>
+<br><br>
+  <mat-form-field  id="campo" appearance="fill">
+    <mat-label>Quantidade</mat-label>
+    <input matInput placeholder="Quantidade" formControlName="qtdDisponivel" #qtdDisponivel>
+    <mat-hint align="end">{{qtdDisponivel.value?.length}}/100</mat-hint>
+    <mat-error *ngIf="form.get('qtdDisponivel')?.invalid">{{getErrorMessage("qtdDisponivel")}}</mat-error>
+    <mat-hint>Digite a quantidade em estoque</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field id="campo" appearance="fill">
+    <mat-label>Categoria</mat-label>
+    <mat-select formControlName="categoria">
+      <mat-option value="null"> </mat-option>
+      <mat-option value="Alimento" >Alimento</mat-option>
+      <mat-option value="Eletrônico">Eletrônico</mat-option>
+      <mat-option value="Eletrodoméstico">Eletrodoméstico</mat-option>
+      <mat-option value="Móvel">Móvel</mat-option>
+      <mat-option value="Material de escritório">Material de escritório</mat-option>
+    </mat-select>
+    <mat-error *ngIf="form.get('categoria')?.invalid">{{getErrorMessage("categoria")}}</mat-error>
+    <mat-hint>Escolha a categoria do produto</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field id="campo" appearance="fill">
+    <mat-label>Fornecedor</mat-label>
+    <input matInput placeholder="Fornecedor" formControlName="fornecedor" #fornecedor>
+    <mat-hint align="end">{{fornecedor.value?.length}}/100</mat-hint>
+    <mat-error *ngIf="form.get('fornecedor')?.invalid">{{getErrorMessage("fornecedor")}}</mat-error>
+    <mat-hint>Digite o fornecedor do produto</mat-hint>
+  </mat-form-field>
+</form>
+</div>
+<div mat-dialog-actions>
+  <div><button mat-raised-button mat-dialog-close color="primary" (click)="onSubmit()" >Salvar</button></div>
+  <span class="example-spacer"></span>
+  <div><button mat-raised-button mat-dialog-close (click)="onCancel()">Cancelar</button></div>
+</div>
+</div>
+
+

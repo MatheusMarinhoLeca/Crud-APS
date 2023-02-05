@@ -1,0 +1,27 @@
+
+
+mat-card{
+  max-width: 90%;
+  margin: 2em auto;
+  text-align:center;
+}
+
+mat-cell {
+
+  align-items: center;
+  justify-content: center;
+}
+
+mat-header-cell{
+
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-spinner{
+  padding: 2rem ;
+  background: rgba($color: #6b6b6b00, $alpha: 1.0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

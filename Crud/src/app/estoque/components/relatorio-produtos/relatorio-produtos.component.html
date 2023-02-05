@@ -1,0 +1,91 @@
+
+
+<mat-toolbar color="primary">
+  <span >Relatório</span>
+
+
+</mat-toolbar>
+
+<mat-card>
+  <mat-card-content>
+    <div class="column-flex mat-elevation-z8">
+    <mat-toolbar color="secondary">
+      <span>Listagem dos produtos que estão faltando em estoque</span>
+      <span class="example-spacer"></span>
+    </mat-toolbar>
+
+
+    <mat-card-content>
+<div *ngIf="estoque | async as estoque; else loading">
+  <mat-table  [dataSource]="estoque">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="nome">
+    <mat-header-cell  *matHeaderCellDef> Nome </mat-header-cell>
+    <mat-cell  *matCellDef="let produto"> {{produto.nome}} </mat-cell>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="valorVenda">
+    <mat-header-cell  *matHeaderCellDef> Valor de venda </mat-header-cell>
+    <mat-cell  *matCellDef="let produto"> {{produto.valorVenda}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="qtdDisponivel">
+    <mat-header-cell  *matHeaderCellDef> Quantidade Disponível </mat-header-cell>
+    <mat-cell  *matCellDef="let produto"> {{produto.qtdDisponivel}} </mat-cell>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="categoria">
+    <mat-header-cell  *matHeaderCellDef> Categoria </mat-header-cell>
+    <mat-cell  *matCellDef="let produto"> {{produto.categoria}}
+      <mat-icon aria-hidden="false" aria-label="Categoria">
+        {{produto.categoria | categoria}}
+      </mat-icon>
+    </mat-cell>
+  </ng-container>
+
+   <!-- Weight Column -->
+
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="fornecedor">
+    <mat-header-cell  *matHeaderCellDef> Fornecedor </mat-header-cell>
+    <mat-cell  *matCellDef="let produto"> {{produto.fornecedor}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row  *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row  *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+
+</div>
+<ng-template #loading>
+  <div class="loading-spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+
+</ng-template>
+
+
+    </mat-card-content>
+
+    <mat-paginator [length]="length" pageSize=10
+    (page)="getPaginatorData($event)" [pageSizeOptions]="[10, 20, 30]"
+    showFirstLastButtons="false">
+</mat-paginator>
+
+
+
+
+
+    </div>
+
+
+
+</mat-card-content>
+
+</mat-card>

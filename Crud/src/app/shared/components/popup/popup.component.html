@@ -1,0 +1,30 @@
+<div *ngIf="mostrar; else deletar">
+<h1 mat-dialog-title>Dados da frase</h1>
+<div mat-dialog-content >
+  Resultados do Calculo:
+</div>
+<div mat-dialog-content >
+  Frase: {{frase}}
+</div>
+<div mat-dialog-content >
+  Letra: {{letra}}
+</div>
+<div mat-dialog-content >
+  Tempo de duração: {{tempo}}
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close cdkFocusInitial>Fechar</button>
+</div>
+</div>
+
+<ng-template #deletar>
+  <h1 mat-dialog-title>Deletar produto</h1>
+  <div mat-dialog-content >
+    Tem certeza que quer deletar o produto?
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close cdkFocusInitial >Não</button>
+    <button mat-button (click)="onClick()" mat-dialog-close>Sim</button>
+  </div>
+
+</ng-template>

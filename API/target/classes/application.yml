@@ -1,0 +1,12 @@
+server:
+  error:
+    include-stacktrace: ON_PARAM
+
+spring:
+  datasource:
+    url: jdbc:mysql://containers-us-west-52.railway.app:5518/railway?&createDatabaseIfNotExists=true
+    username: root
+    password: kd6g26AudFJXiMXIKNND
+  jpa:
+    hibernate:
+      ddl-auto: update

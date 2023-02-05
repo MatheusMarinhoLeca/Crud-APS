@@ -1,0 +1,24 @@
+mat-card{
+  max-width: 90%;
+  margin: 2em auto;
+  text-align:center;
+}
+
+.column-flex{
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.loading-spinner{
+  padding: 2rem ;
+  background: rgba($color: #6b6b6b00, $alpha: 1.0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+

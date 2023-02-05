@@ -1,0 +1,70 @@
+
+<mat-toolbar color="primary">
+  <span>Estoque</span>
+  <span class="example-spacer"></span>
+  <div class="example-button-container">
+    <button   mat-mini-fab  [matMenuTriggerFor]="menu"color="primary" aria-label="Example icon button with a menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button (click)="categoriasList()" mat-menu-item>
+        <mat-icon>category</mat-icon>
+        <span>Relatório de categorias</span>
+      </button>
+      <button (click)="produtosList()"mat-menu-item>
+        <mat-icon>production_quantity_limits</mat-icon>
+        <span>Relatório de produtos</span>
+      </button>
+      <button (click)="fornecedoresList()" mat-menu-item>
+        <mat-icon>inventory</mat-icon>
+        <span>Relatório de fornecedores</span>
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
+
+
+<mat-card>
+  <mat-card-content>
+    <div class="column-flex mat-elevation-z8">
+    <mat-toolbar color="secondary">
+      <span>Listagem de produtos catalogados</span>
+      <span class="example-spacer"></span>
+    </mat-toolbar>
+
+      <app-estoque-list *ngIf="estoque$ | async as estoque; else loading"
+    [estoque]="estoque"
+    (add)="onAdd()"
+    (edit)="onEdit($event)"
+    (remove)="onRemove($event)"
+    >
+
+
+    </app-estoque-list>
+
+
+
+
+
+
+
+    <ng-template #loading>
+      <div class="loading-spinner">
+        <mat-spinner></mat-spinner>
+      </div>
+
+    </ng-template>
+    </div>
+
+    <mat-paginator [length]="length" pageSize=10
+    (page)="getPaginatorData($event)" [pageSizeOptions]="[10, 20, 30]"
+    showFirstLastButtons="false">
+</mat-paginator>
+
+</mat-card-content>
+
+</mat-card>
+
+
+
+
