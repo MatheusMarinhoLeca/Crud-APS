@@ -15,11 +15,11 @@ import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { PopupComponent } from 'app/shared/components/popup/popup.component';
 @Component({
-  selector: 'app-estoque',
-  templateUrl: './estoque.component.html',
-  styleUrls: ['./estoque.component.scss']
+  selector: 'app-estoqueLogado',
+  templateUrl: './estoqueLogado.component.html',
+  styleUrls: ['./estoqueLogado.component.scss']
 })
-export class EstoqueComponent implements OnInit
+export class EstoqueLogadoComponent implements OnInit
  {
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;

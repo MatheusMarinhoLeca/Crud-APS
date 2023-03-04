@@ -3,5 +3,40 @@
     <div class="example-button-container">
       <button class="button" mat-button (click)="estoqueLink()" >Estoque</button>
     </div>
+    <span class="example-spacer"></span>
+
+    <div id="login">
+
+      <mat-card>
+        <mat-card-content>
+          <div id="container">
+             <div><span *ngIf="!user">Login Gerente</span></div>
+             <span class="example-spacer"></span>
+
+          <div class="example-button-container">
+
+            <asl-google-signin-button *ngIf="!user"></asl-google-signin-button>
+
+          </div>
+          <div id="container2" *ngIf="user">
+            <div>
+              <img src="{{user.photoUrl}}">
+            </div>
+            <span class="example-spacer"></span>
+
+            <div>
+              <h4>{{  user.name}}</h4>
+
+            </div>
+          </div>
+
+          </div>
+
+      </mat-card-content>
+
+      </mat-card>
+    </div>
+
+
   </mat-toolbar>
 <router-outlet></router-outlet>

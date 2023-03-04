@@ -11,11 +11,11 @@ import { EstoqueService } from '../../services/estoque.service';
 import { Produto } from 'app/estoque/model/produto';
 
 @Component({
-  selector: 'app-estoque-list',
-  templateUrl: './estoque-list.component.html',
-  styleUrls: ['./estoque-list.component.scss']
+  selector: 'app-estoqueLogado-list',
+  templateUrl: './estoqueLogado-list.component.html',
+  styleUrls: ['./estoqueLogado-list.component.scss']
 })
-export class EstoqueListComponent {
+export class EstoqueLogadoListComponent {
 
   @Input() estoque: Produto[]=[];
   @Output() add = new EventEmitter(false);
@@ -27,7 +27,8 @@ export class EstoqueListComponent {
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'bottom';
 
-  readonly displayedColumns = ['nome','valorVenda','qtdDisponivel','categoria','fornecedor'];
+  readonly displayedColumns = ['nome','valorVenda','qtdDisponivel','categoria','fornecedor', 'acoes'];
+
 
   constructor(
     public dialog: MatDialog,

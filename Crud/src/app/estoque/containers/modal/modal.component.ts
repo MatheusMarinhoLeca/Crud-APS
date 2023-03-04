@@ -74,7 +74,7 @@ export class ModalComponent implements OnInit {
       this._snackBar.open("Não conseguiu cadastrar o produto", "Entendido");
     });
     }
-    setTimeout(() => { window.location.reload() }, 3000);
+    setTimeout(() => { this.router.navigate([''], {relativeTo:this.route}); }, 3000);
 
 
   }

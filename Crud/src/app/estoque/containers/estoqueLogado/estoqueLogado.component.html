@@ -32,7 +32,7 @@
       <span class="example-spacer"></span>
     </mat-toolbar>
 
-      <app-estoque-list *ngIf="estoque$ | async as estoque; else loading"
+      <app-estoqueLogado-list *ngIf="estoque$ | async as estoque; else loading"
     [estoque]="estoque"
     (add)="onAdd()"
     (edit)="onEdit($event)"
@@ -40,7 +40,7 @@
     >
 
 
-    </app-estoque-list>
+    </app-estoqueLogado-list>
 
 
 

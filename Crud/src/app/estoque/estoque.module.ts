@@ -10,11 +10,15 @@ import { EstoqueListComponent } from './components/estoque-list/estoque-list.com
 import { RelatorioCategoriasComponent } from './components/relatorio-categorias/relatorio-categorias.component';
 import { RelatorioProdutosComponent } from './components/relatorio-produtos/relatorio-produtos.component';
 import { RelatorioFornecedoresComponent } from './components/relatorio-fornecedores/relatorio-fornecedores.component';
+import { EstoqueLogadoComponent } from './containers/estoqueLogado/estoqueLogado.component';
+import { EstoqueLogadoListComponent } from './components/estoqueLogado-list/estoqueLogado-list.component';
 
 @NgModule({
   declarations: [
     EstoqueComponent,
+    EstoqueLogadoComponent,
     EstoqueListComponent,
+    EstoqueLogadoListComponent,
     RelatorioCategoriasComponent,
     RelatorioProdutosComponent,
     RelatorioFornecedoresComponent
