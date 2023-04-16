@@ -1,9 +1,9 @@
-package api.logap.controller;
+package api.aps.controller;
 
-import api.logap.domain.Produto;
-import api.logap.requests.ProdutoPostRequestBody;
-import api.logap.requests.ProdutoPutRequestBody;
-import api.logap.service.ProdutoService;
+import api.aps.domain.Produto;
+import api.aps.requests.ProdutoPostRequestBody;
+import api.aps.requests.ProdutoPutRequestBody;
+import api.aps.service.ProdutoService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -19,7 +19,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/produtos")
-//@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:4200")
 @Log4j2
 @RequiredArgsConstructor
 public class ProdutoController {

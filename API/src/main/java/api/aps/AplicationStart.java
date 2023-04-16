@@ -1,4 +1,4 @@
-package api.logap;
+package api.aps;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

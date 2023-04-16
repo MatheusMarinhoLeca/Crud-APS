@@ -18,7 +18,7 @@ import { PopupComponent } from './components/popup/popup.component';
   ],
   imports: [
     AppMaterialModule,
-    CommonModule
+    CommonModule,
   ],
   exports:[
     ErrorDialogComponent,

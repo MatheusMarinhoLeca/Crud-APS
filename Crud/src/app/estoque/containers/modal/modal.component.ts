@@ -64,7 +64,7 @@ export class ModalComponent implements OnInit {
     const id= this.data.id
 
     if(edit=="true" && this.form.value.id!=0){
-      this.service.save(this.form.value).subscribe(data=>this._snackBar.open("Produto atualizado com sucesso, atualizando DB...", ""), error =>{
+      this.service.save(this.form.value).subscribe(data=>this._snackBar.open("Produto atualizado com sucesso, atualizando DB...", "", {duration: 5000}), error =>{
         this._snackBar.open("Não conseguiu atualizar o produto", "Entendido");
       });
 
@@ -75,12 +75,13 @@ export class ModalComponent implements OnInit {
     });
     }
     setTimeout(() => { this.router.navigate([''], {relativeTo:this.route}); }, 3000);
-
+    setTimeout(() => { this.router.navigate(['estoque/logado'], {relativeTo:this.route}); }, 3000)
 
   }
 
   onCancel(){
     this.router.navigate([''], {relativeTo:this.route});
+    this.router.navigate(['estoque/logado'], {relativeTo:this.route});
   }
   getErrorMessage(fieldName: string){
     const field = this.form.get(fieldName);

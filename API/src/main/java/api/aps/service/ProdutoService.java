@@ -1,11 +1,11 @@
-package api.logap.service;
+package api.aps.service;
 
-import api.logap.domain.Produto;
-import api.logap.exception.BadRequestException;
-import api.logap.mapper.ProdutoMapper;
-import api.logap.repository.ProdutoRepository;
-import api.logap.requests.ProdutoPostRequestBody;
-import api.logap.requests.ProdutoPutRequestBody;
+import api.aps.domain.Produto;
+import api.aps.exception.BadRequestException;
+import api.aps.mapper.ProdutoMapper;
+import api.aps.repository.ProdutoRepository;
+import api.aps.requests.ProdutoPostRequestBody;
+import api.aps.requests.ProdutoPutRequestBody;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

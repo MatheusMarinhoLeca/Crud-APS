@@ -1,4 +1,4 @@
-package api.logap.wrapper;
+package api.aps.wrapper;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonCreator.Mode;

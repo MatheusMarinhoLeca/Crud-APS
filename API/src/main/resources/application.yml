@@ -4,9 +4,9 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://containers-us-west-52.railway.app:5518/railway?&createDatabaseIfNotExists=true
+    url: jdbc:mysql://localhost:3306/api/estoque?useSSL=false&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
     username: root
-    password: kd6g26AudFJXiMXIKNND
+    password: root
   jpa:
     hibernate:
       ddl-auto: update

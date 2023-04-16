@@ -1,8 +1,8 @@
-package api.logap.mapper;
+package api.aps.mapper;
 
-import api.logap.domain.Produto;
-import api.logap.requests.ProdutoPostRequestBody;
-import api.logap.requests.ProdutoPutRequestBody;
+import api.aps.domain.Produto;
+import api.aps.requests.ProdutoPostRequestBody;
+import api.aps.requests.ProdutoPutRequestBody;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

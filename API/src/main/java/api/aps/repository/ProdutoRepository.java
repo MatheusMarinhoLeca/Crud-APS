@@ -1,6 +1,6 @@
-package api.logap.repository;
+package api.aps.repository;
 
-import api.logap.domain.Produto;
+import api.aps.domain.Produto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

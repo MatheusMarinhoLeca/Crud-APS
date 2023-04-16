@@ -1,6 +1,6 @@
-package api.logap.handler;
+package api.aps.handler;
 
-import api.logap.exception.*;
+import api.aps.exception.*;
 import jakarta.annotation.Nullable;
 import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.http.HttpHeaders;

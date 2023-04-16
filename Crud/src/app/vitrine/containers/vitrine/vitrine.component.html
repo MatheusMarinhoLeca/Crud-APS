@@ -1,0 +1,57 @@
+<mat-toolbar color="primary">
+  <span>Vitrine</span>
+  <span class="example-spacer"></span>
+  <div class="example-button-container">
+    <button  (click)="carrinhoLink()" mat-mini-fab color="primary" aria-label="Ir para o carrinho">
+      <mat-icon >
+        shopping_cart_checkout
+       </mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+
+    </mat-menu>
+  </div>
+</mat-toolbar>
+
+
+<mat-card>
+  <mat-card-content>
+    <div class="column-flex mat-elevation-z8">
+    <mat-toolbar color="secondary">
+      <span>Listagem de produtos disponíveis para compra</span>
+      <span class="example-spacer"></span>
+    </mat-toolbar>
+
+      <app-vitrine-list *ngIf="estoque$ | async as estoque; else loading"
+    [estoque]="estoque"
+    >
+
+
+    </app-vitrine-list>
+
+
+
+
+
+
+
+    <ng-template #loading>
+      <div class="loading-spinner">
+        <mat-spinner></mat-spinner>
+      </div>
+
+    </ng-template>
+    </div>
+
+    <mat-paginator [length]="length" pageSize=10
+    (page)="getPaginatorData($event)" [pageSizeOptions]="[10, 20, 30]"
+    showFirstLastButtons="false">
+</mat-paginator>
+
+</mat-card-content>
+
+</mat-card>
+
+
+
+

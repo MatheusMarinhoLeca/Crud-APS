@@ -11,11 +11,16 @@ import { SocialLoginModule, SocialAuthServiceConfig } from '@abacritt/angularx-s
 import {
   GoogleLoginProvider
 } from '@abacritt/angularx-social-login';
+import { VitrineListComponent } from './vitrine/components/vitrine-list/vitrine-list.component';
+import { VitrineComponent } from './vitrine/containers/vitrine/vitrine.component';
+import { VitrineModule } from './vitrine/vitrine.module';
+import { CarrinhoModule } from './carrinho/carrinho.module';
+import { ComprasModule } from './compras/compras.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,6 +29,9 @@ import {
     AppMaterialModule,
     HttpClientModule,
     EstoqueModule,
+    VitrineModule,
+    CarrinhoModule,
+    ComprasModule,
     SocialLoginModule
 
   ],

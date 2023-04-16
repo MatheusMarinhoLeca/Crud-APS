@@ -1,4 +1,4 @@
-package api.logap.exception;
+package api.aps.exception;
 
 import lombok.Data;
 import lombok.experimental.SuperBuilder;

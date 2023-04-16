@@ -1,4 +1,4 @@
-package api.logap.exception;
+package api.aps.exception;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 

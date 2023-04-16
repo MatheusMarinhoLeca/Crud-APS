@@ -1,19 +1,22 @@
 <div *ngIf="mostrar; else deletar">
-<h1 mat-dialog-title>Dados da frase</h1>
+<h1 mat-dialog-title>Dados de pagamento</h1>
 <div mat-dialog-content >
-  Resultados do Calculo:
+  Digite o CEP do endereço de combrança:
 </div>
 <div mat-dialog-content >
-  Frase: {{frase}}
+  <form [formGroup]="form">
+    <mat-form-field id="campo" appearance="fill">
+      <mat-label>CEP</mat-label>
+      <input matInput placeholder="CEP" formControlName="cep" #nome>
+      <mat-hint align="end">{{nome.value?.length}}/8</mat-hint>
+      <mat-error *ngIf="form.get('cep')?.invalid">{{getErrorMessage("cep")}}</mat-error>
+      <mat-hint>Digite o CEP de cobrança</mat-hint>
+    </mat-form-field>
+  </form>
 </div>
-<div mat-dialog-content >
-  Letra: {{letra}}
-</div>
-<div mat-dialog-content >
-  Tempo de duração: {{tempo}}
-</div>
+
 <div mat-dialog-actions>
-  <button mat-button mat-dialog-close cdkFocusInitial>Fechar</button>
+  <button mat-button (click)="enviar()" mat-dialog-close cdkFocusInitial>Enviar</button>
 </div>
 </div>
 

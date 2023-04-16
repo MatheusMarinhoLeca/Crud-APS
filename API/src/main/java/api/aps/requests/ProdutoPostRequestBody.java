@@ -1,4 +1,4 @@
-package api.logap.requests;
+package api.aps.requests;
 
 import jakarta.validation.constraints.NotEmpty;
 import lombok.Builder;
